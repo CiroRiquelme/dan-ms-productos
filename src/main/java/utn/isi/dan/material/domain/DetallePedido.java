@@ -9,6 +9,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import utn.isi.dan.material.service.implement.DetallePedidoDto;
+
 @Entity
 @Table(name = "DETALLE_PEDIDO", schema = "MS_MATERIAL")
 public class DetallePedido {
@@ -25,6 +27,13 @@ public class DetallePedido {
 	@Column(name = "CAN_DET_PED", nullable = false)
 	private Integer cantidad;
 	
+	public DetallePedido() {
+		
+	}
+	public DetallePedido(DetallePedidoDto detalle) {
+		this.material = new Material(detalle.getIdMaterial(), detalle.getDescripcionMaterial());	
+		this.cantidad = detalle.getCantidadMaterial();
+	}
 	public Integer getId() {
 		return id;
 	}

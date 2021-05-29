@@ -37,6 +37,13 @@ public class Material {
 	@JoinColumn(name = "ID_UNI")
 	private Unidad unidad;
 	
+	public Material() {
+		
+	}
+	
+	public Material(Integer idMaterial, String descripcionMaterial) {
+		// TODO Auto-generated constructor stub
+	}
 	public Integer getId() {
 		return id;
 	}
