@@ -1,15 +1,44 @@
-package dan.tp2021.danmsproductos.domain;
+package utn.isi.dan.material.domain;
 
 import java.time.Instant;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "MOVIMIENTO_STOCK", schema = "MS_MATERIAL")
 public class MovimientosStock {
 	
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "ID_MOV_STOCK")
 	private Integer id;
+    
+    @OneToOne
+    @JoinColumn(name = "ID_DET_PED")
 	private DetallePedido detallePedido;
+	
+    @OneToOne
+    @JoinColumn(name = "ID_DET_PROV")
 	private DetalleProvision detalleProvision;
+    
+    @OneToOne
+    @JoinColumn(name = "ID_MAT")
 	private Material material;
-	private Integer cantidadEntrada;
+	
+    @Column(name = "CANT_ENT_MOV_STOCK")
+   	private Integer cantidadEntrada;
+	
+    @Column(name = "CANT_SAL_MOV_STOCK")
 	private Integer cantidadSalida;
+	
+    @Column(name = "FEC_MOV_STOCK")
 	private Instant fecha;
 	
 	public Integer getId() {

@@ -1,4 +1,4 @@
-package dan.tp2021.danmsproductos;
+package utn.isi.dan.producto;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

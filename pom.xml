@@ -8,11 +8,11 @@
 		<version>2.4.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>dan.tp2021</groupId>
+	<groupId>utn.isi.dan.productos</groupId>
 	<artifactId>dan-ms-productos</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>dan-ms-productos</name>
-	<description> Microservicio de gestion de productos </description>
+	<description> Microservicio de gestion de Productos </description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -45,7 +45,7 @@
 			<artifactId>spring-data-jdbc</artifactId>
 		</dependency>
 		
-		<dependency>
+				<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-boot-starter</artifactId>
 			<version>3.0.0</version>
@@ -73,6 +73,21 @@
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-jpa</artifactId>
 		</dependency>
+		
+				<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-artemis</artifactId>
+		</dependency>
+		
+		<dependency>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-aop</artifactId>
+</dependency>
 			
 		
 	</dependencies>
