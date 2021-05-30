@@ -8,11 +8,11 @@
 		<version>2.4.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>utn.isi.dan.productos</groupId>
-	<artifactId>dan-ms-productos</artifactId>
+	<groupId>utn.isi.dan.material</groupId>
+	<artifactId>dan-ms-material</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>dan-ms-productos</name>
-	<description> Microservicio de gestion de Productos </description>
+	<name>dan-ms-material</name>
+	<description> Microservicio de gestion de Materiales </description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
